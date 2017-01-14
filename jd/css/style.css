@@ -1,0 +1,527 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html{
+    overflow-y: scroll;
+}
+body{
+    font: 12px/1.5 "Microsoft Yahei";
+    background-color: #f6f6f6;
+}
+ul,ol{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+    font-weight: normal;
+}
+img,input,select{
+    outline: none;
+    border: none;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+i,em{
+    font-style: normal;
+}
+.clear:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.clear{
+    /*兼容ie7以下版本*/
+    zoom: 1;
+}
+.main{
+    margin: 0 auto;
+    width: 1190px;
+}
+.J_event{
+    position: relative;
+    z-index: 1;
+    height: 80px;
+    background-color: #f9c533;
+    opacity: 1;
+    filter(alpha(opacity = 100));
+    overflow: hidden;
+}
+.top_event{
+    display: block;
+    position: relative;
+}
+.J_event img{
+    width: 100%;
+    height:100%;
+}
+.J_event i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/xx.png") no-repeat -14px -15px;
+}
+.top{
+    height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #dddddd;
+}
+.top .address{
+    position: relative;
+    float: left;
+    border: 1px solid transparent;
+    margin-left: 200px;
+    font-size: 0px;
+}
+.top .address>div{
+    border: 1px solid transparent;
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 7px;
+    z-index: 10;
+}
+.top .address:hover div{
+    border: 1px solid;
+    border-color: transparent #ccc;
+    background-color: #ffffff;
+}
+.top .address:hover .addressBox{
+    display: block;
+    background: #ffffff;
+}
+.top .address i{
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px;
+    height: 14px;
+    background: url("../images/ps.png") no-repeat 0 0;
+    vertical-align: -3px;
+}
+.top .address span{
+    font-size: 12px;
+    color: #999999;
+}
+.top .address .addressBox{
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: 0px;
+    z-index: 5;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid ;
+    border-color: #ccc #ccc #ccc #ccc;
+    font-size: 12px;
+}
+.top .address:hover .addressBox .red{
+    background-color: #f10215;
+    color: #ffffff;
+}
+.top .address .addressBox li{
+    float: left;
+    padding: 2px 0;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+}
+.top .address .addressBox a{
+    display: inline-block;
+    padding: 0 8px;
+    height: 24px;
+    color: #999999;
+}
+.top .address .addressBox a:hover{
+    color: #c81623;
+}
+.top .address .addressBox a:hover{
+    background-color: #f4f4f4;
+}
+.top .navigate{
+    float: right;
+}
+.top .navigate li{
+    float: left;
+}
+.top .navigate .navigateItem>a>i{
+    display: inline-block;
+    margin-left: 4px;
+    width: 10px;
+    height: 5px;
+    background: url("../images/ps.png") no-repeat -11px 0;
+}
+.top .navigate .navigateItem .red{
+    color: #c81623;
+}
+.top .navigate .navigateItem .red:hover{
+    color: #c81623;
+}
+.top .navigate .navigateItem>a{
+    position: relative;
+    display: inline-block;
+    padding: 0 7px;
+    height: 29px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #999999;
+    border: 1px solid transparent;
+    z-index: 10;
+}
+.top .navigate .second{
+    position: relative;
+}
+.top .navigate .second:hover .hovered{
+    border-color: transparent #ccc;
+    background-color: #fff;
+}
+.top .navigate .second:hover .myjd{
+    display: block;
+}
+.top .navigate .navigateItem .hovered:hover{
+    color: #c81623;
+}
+.top .navigate .f{
+    width: 1px;
+    height: 10px;
+    margin: 11px 7px 0 5px;
+    background-color: #cccccc;
+}
+.top .navigate .navigateItem .myjd{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    padding: 10px 15px;
+    width: 280px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 5;
+}
+.top .navigate .navigateItem .myjd .myjdimg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.top .navigate .navigateItem .myjd .myjddiv{
+    position: absolute;
+    left: 85px;
+    top: 12px;
+}
+.top .navigate .navigateItem .myjd .myjddiv>a{
+    display: inline-block;
+    margin-top: 4px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #999;
+}
+.top .navigate .navigateItem .myjd .myjddiv a:hover{
+    color: #c81623;
+}
+.top .navigate .navigateItem .myjd .myjddiv>div{
+    line-height: 25px;
+    font-size: 0px;
+}
+.top .navigate .navigateItem .myjd .myjddiv>div>a{
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+}
+.top .navigate .navigateItem .myjd .myjddiv>div>i{
+    display: inline-block;
+    margin: 0 15px 0 11px;
+    font-size: 12px;
+    color: #999;
+}
+.top .navigate .navigateItem .myjd .myjdul{
+    margin-top: 8px;
+    
+}
+.top .navigate .navigateItem .myjd .myjdul>li{
+    float: left;
+    width: 125px;
+}
+.top .navigate .navigateItem .myjd .myjdul a{
+    color: #999;
+}
+.top .navigate .navigateItem .myjd .myjdul a:hover{
+    color: #c81623;
+}
+.top .navigate .navigateItem .kf{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    padding: 4px 0 10px 0;
+    width: 170px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 5;
+}
+.top .navigate .second:hover .kf{
+    display: block;
+}
+.top .navigate .navigateItem .kf>div{
+    padding-top: 4px;
+}
+.top .navigate .navigateItem .kf>div>p{
+    margin-left: 15px;
+    line-height: 25px;
+    font-weight: 700;
+}
+.top .navigate .navigateItem .kf .kful>li {
+    float: left;
+    width: 70px;
+    margin-left: 15px;
+    line-height: 23px;
+}
+.top .navigate .navigateItem .kf a{
+    color: #999;
+}
+.top .navigate .navigateItem .kf a:hover{
+    color: #c81623;
+}
+.top .navigate .navigateItem .kf em{
+    display: block;
+    margin-top: 6px;
+    width: 170px;
+    height: 1px;
+    border-top:1px dotted #eee;
+}
+.top .navigate .navigateItem .dh{
+    display: none;
+    float: left;
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 15px 0;
+    top: 30px;
+    left: -1114px;
+    width: 1190px;
+    z-index: 5;
+    background: #ffffff;
+}
+.top .navigate .navigateItem:hover .dh{
+    display: block;
+}
+.top .navigate .navigateItem .dh .fore1{
+    float: left;
+    border-left: 1px solid #eee;
+}
+.top .navigate .navigateItem .dh .fore1 .dhfirst{
+    border-left: none;
+}
+.top .navigate .navigateItem .dh .fore1>span{
+    display: inline-block;
+    margin: 5px 0 10px 20px;
+    font-weight: 700;
+    color: #666;
+}
+.top .navigate .navigateItem .dh .fore1 .foreUl{
+    padding-left: 20px;
+    width: 255px;
+    line-height: 22px;
+
+}
+.top .navigate .navigateItem .dh .fore1 .first{
+    width: 340px;
+}
+.top .navigate .navigateItem .dh .fore1 li{
+    float: left;
+    width: 85px;
+}
+.top .navigate .navigateItem .dh .fore1 a{
+    color: #999;
+}
+.top .navigate .navigateItem .dh .fore1 .foreUl>li>a:hover{
+    color: #c81623;
+}
+.header{
+    position: relative;
+}
+.header h1{
+    position: absolute;
+    top: -31px;
+    width: 190px;
+    height: 170px;
+    background-color: #fff;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.2);
+}
+.header h1 a{
+    position: absolute;
+}
+.header h1 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.header .search{
+    position: absolute;
+    left: 210px;
+    top: 25px;
+    z-index: 1;
+}
+.header .search>div{
+    margin:0px 0 0 109px;
+}
+.header .search>div form{
+    font-size: 0;
+}
+.header .search>div input[type=text]{
+    padding: 4px;
+    width: 498px;
+    height: 25px;
+    border: 1px solid #f10215;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+}
+.header .search>div input[type=submit]{
+    width: 50px;
+    height: 35px;
+    background: #f10215 url(../images/sprite_fs@1x.png) no-repeat -24px -121px;
+}
+.header .search>div a{
+    line-height: 29px;
+    margin-right: 11px;
+    font-size: 12px;
+    color: #999;
+}
+.header .search>div .fastSearch a:hover{
+    color: #c81623;
+}
+.header .search>div .fastSearch{
+    font-size: 0px;
+}
+.header .search>div a.fastSearchRed{
+    color: #f10215;
+}
+.header .search .navigateSearch{
+    margin-top: 11px;
+    padding: 0 20px;
+}
+.header .search .navigateSearch li{
+    position: relative;
+    float: left;
+    margin-right:30px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.header .search .navigateSearch li img{
+    position: absolute;
+    top: 0;
+    left: 47px;
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+
+}
+.header .search .navigateSearch li a{
+    color: #666;
+}
+.header .search .navigateSearch li.separate{
+    margin: 16px 20px 0 -10px;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #ccc;
+}
+.header .shopCar{
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+.header .shopCar .carNum{
+    border: 1px solid #e3e4e5;
+}
+.header .shopCar .addtemp{
+    position: relative;
+    z-index: 2;
+    padding-left: 54px;
+    width: 134px;
+    height: 33px;
+    background: #fff;
+
+    font-size: 0;
+}
+/*.header .shopCar .addtemp{
+    position: absolute;
+    z-index: 3;
+    width: 190px;
+    height: 35px;
+    background: #fff;
+}*/
+.header .shopCar .carNum:hover{
+    border: 1px solid;
+    border-color: #ccc #ccc transparent #ccc;
+}
+.header .shopCar .carNum:hover .carHover{
+    display: block;
+}
+.header .shopCar .carNum .car{
+    margin: 7px 0 0 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/ps.png") no-repeat 0 -19px;
+    vertical-align: -2px;
+}
+.header .shopCar .carNum .num{
+    position: absolute;
+    top: 5px;
+    right: 34px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    border-radius: 50%;
+    background-color: #f10215;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.header .shopCar .carNum a{
+    display: inline-block;
+    margin-left: 7px;
+    margin-right: 4px;
+    line-height: 33px;
+    color: #f10214;
+    font-size: 12px;
+}
+.header .shopCar .shopImg{
+    margin-top: 30px;
+    width: 190px;
+    height: 40px;
+}
+.header .shopCar .shopImg a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/581741e5Nb08c31e0.png") no-repeat;
+}
+.header .shopCar .carHover{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 33px;
+    right: 0px;
+    padding: 10px 15px;
+    width: 278px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.header .shopCar .carHover .carHoverCar{
+    padding-left: 15px;
+}
+.header .shopCar .carHover .carHoverCar i{
+    display: inline-block;
+    width: 57px;
+    height: 49px;
+    background: url("../images/58004d6dN2927f0f7.png") no-repeat;
+    vertical-align: middle;
+}
+.header .shopCar .carHover .carHoverCar span{
+    font-size: 12px;
+    line-height: 42px;
+    color: #999;
+}
